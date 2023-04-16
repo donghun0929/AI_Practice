@@ -95,6 +95,7 @@ int maxai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 						move.pop_back();
 						continue;
 					}
+
 					k = nMin;// +valuee(temp, 1) + valuee(value, 0);
 
  					if (big < k) {
