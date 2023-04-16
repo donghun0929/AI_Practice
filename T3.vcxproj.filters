@@ -57,7 +57,10 @@
     <None Include="res\T3.rc2">
       <Filter>리소스 파일</Filter>
     </None>
+<<<<<<< HEAD
     <None Include=".gitignore" />
+=======
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\T3.ico">

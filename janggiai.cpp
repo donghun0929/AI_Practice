@@ -19,14 +19,23 @@ int consty;
 int constx2;
 int consty2;
 
+<<<<<<< HEAD
 int maxai(int(*aimap)[9], int cnt, int a, int b, int val);
 int minai(int(*aimap)[9], int cnt, int a, int b, int val);
+=======
+int maxai(int(*aimap)[9], int cnt, int a, int b);
+int minai(int(*aimap)[9], int cnt, int a, int b);
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 void moveai(vector <pair <int, int > > &move, int y, int x, int turn);
 
 int valuee(int x, int i) {
 	if (i == 1)   // start value
 	{
+<<<<<<< HEAD
 		//return 0;
+=======
+
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 		if (x % 10 == 7) return 2;
 		if (x % 10 == 6) return 3;
 		if (x % 10 == 5) return 4;
@@ -52,9 +61,15 @@ int valuee(int x, int i) {
 }
 
 
+<<<<<<< HEAD
 int maxai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 	if (cnt <= 0)
 		return val;
+=======
+int maxai(int(*aimap)[9], int cnt, int a, int b) {
+	if (cnt <= 0)
+		return 0;
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 	vector < pair<int, int > > move;
 	int value, temp;
 	int score = -99999;
@@ -78,13 +93,21 @@ int maxai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 					constx2 = move[vs].second;
 					value = aimap[move[vs].first][move[vs].second];
 
+<<<<<<< HEAD
 					if (aimap[move[vs].first][move[vs].second] == 7) {
 
 						return score;
+=======
+					if (cnt == full && aimap[move[vs].first][move[vs].second] == 7) {
+						now_x = j; now_y = i;
+						next_x = move[vs].second;  next_y = move[vs].first;
+						goto end;
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 					}
 
 					aimap[move[vs].first][move[vs].second] = temp;
 					aimap[i][j] = 0;
+<<<<<<< HEAD
 					
 					int childVal = val + valuee(temp, 1) + valuee(value, 0);
 					int nMin = minai(aimap, cnt, a, b, childVal);
@@ -103,6 +126,16 @@ int maxai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 						b = k;// -((valuee(temp, 1) + valuee(value, 0)));
 					}
 					if ((a != -99999 && k >= a)) {
+=======
+
+					k = minai(aimap, cnt, a, b) + valuee(temp, 1) + valuee(value, 0);
+
+					if (big < k) {
+						big = k;
+						b = k - (valuee(temp, 1) + valuee(value, 0));
+					}
+					if (valuee(value, 0) == 1000) {
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 						aimap[move[vs].first][move[vs].second] = value;
 						aimap[i][j] = temp;
 						while (vs--)
@@ -111,7 +144,21 @@ int maxai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 						}
 						goto alpha;
 					}
+<<<<<<< HEAD
 					if (score < k && cnt == full)
+=======
+					if (a != -99999 && k - (valuee(temp, 1) + valuee(value, 0)) >= a) {
+						aimap[move[vs].first][move[vs].second] = value;
+						aimap[i][j] = temp;
+						while (vs--)
+						{
+							move.pop_back();
+						}
+						goto alpha;
+					}
+
+					if (cnt == full && score < k)
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 					{
 						score = k;
 						now_x = j; now_y = i;
@@ -137,7 +184,11 @@ alpha:
 
 }
 
+<<<<<<< HEAD
 int minai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
+=======
+int minai(int(*aimap)[9], int cnt, int a, int b) {
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 	int k = 0;
 	int smalll = 99999;
 	vector < pair<int, int > > move2;
@@ -158,6 +209,7 @@ int minai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 					value = aimap[move2[vs2].first][move2[vs2].second];
 					aimap[i][j] = 0;
 
+<<<<<<< HEAD
 					aimap[move2[vs2].first][move2[vs2].second] = temp;
 					int childVal =  val - ((valuee(temp, 1) + valuee(value, 0)));
 
@@ -177,6 +229,22 @@ int minai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 					}
 
 					if ((b != 99999 && k <= b)) {
+=======
+
+					aimap[move2[vs2].first][move2[vs2].second] = temp;
+					k = maxai(aimap, cnt - 1, a, b) - (valuee(temp, 1) + valuee(value, 0));
+					if (valuee(value, 0) == 500) {
+						aimap[move2[vs2].first][move2[vs2].second] = value;
+						aimap[i][j] = temp;
+						while (vs2--)
+						{
+							move2.pop_back();
+						}
+						goto beta;
+
+					}
+					if (b != 99999 && k + (valuee(temp, 1) + valuee(value, 0)) <= b) {
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 						aimap[move2[vs2].first][move2[vs2].second] = value;
 						aimap[i][j] = temp;
 						while (vs2--)
@@ -186,6 +254,13 @@ int minai(int(*aimap)[9], int cnt, int a, int b, int val = 0) {
 						goto beta;
 					}
 
+<<<<<<< HEAD
+=======
+					if (k < smalll) {
+						smalll = k;
+						a = k + (valuee(temp, 1) + valuee(value, 0));
+					}
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 					aimap[move2[vs2].first][move2[vs2].second] = value;
 					aimap[i][j] = temp;
 					move2.pop_back();
@@ -665,8 +740,13 @@ void janggiai::ai() {
 
 	int z = 0;
 
+<<<<<<< HEAD
 	int nDepth = 3;
 	full = nDepth;
+=======
+	int a = 2;
+	full = a;
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 	for (size_t i = 0; i < 10; i++)
 	{
 		for (size_t j = 0; j < 9; j++)
@@ -676,7 +756,11 @@ void janggiai::ai() {
 
 
 	}
+<<<<<<< HEAD
 	z = maxai(aimap, nDepth, -99999, 99999);
+=======
+	z = maxai(aimap, a, -99999, 99999);
+>>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 }
 
 void janggiai::movee(int y, int x) {
