@@ -202,6 +202,7 @@
     <ResourceCompile Include="T3.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="res\T3.rc2" />
   </ItemGroup>
   <ItemGroup>
