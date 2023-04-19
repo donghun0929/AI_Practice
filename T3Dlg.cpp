@@ -314,12 +314,8 @@ void CT3Dlg::OnLButtonDown(UINT nFlags, CPoint point)
 			a.ai();
 			janggi[next_y][next_x] = janggi[now_y][now_x];
 			janggi[now_y][now_x] = 0;
-<<<<<<< HEAD
-
 			int debugX = next_x;
 			int debugY = next_y;
-=======
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
 			next_x = 0; next_y = 0; now_x = 0; now_y = 0;
 			int pcwin = 0;
 			int userwin = 0;

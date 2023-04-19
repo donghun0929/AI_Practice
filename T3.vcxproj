@@ -23,33 +23,21 @@
     <ProjectGuid>{854376C0-A762-40AF-AC06-BDE6F2B23773}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
     <RootNamespace>T3</RootNamespace>
-<<<<<<< HEAD
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <ProjectName>KoreanChess</ProjectName>
-=======
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
-=======
-    <PlatformToolset>v141</PlatformToolset>
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
-=======
-    <PlatformToolset>v141</PlatformToolset>
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -57,22 +45,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
-=======
-    <PlatformToolset>v141</PlatformToolset>
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-<<<<<<< HEAD
     <PlatformToolset>v143</PlatformToolset>
-=======
-    <PlatformToolset>v141</PlatformToolset>
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -222,10 +202,7 @@
     <ResourceCompile Include="T3.rc" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include=".gitignore" />
-=======
->>>>>>> 88e89daa76823abf2848116687cf94bc5e844404
     <None Include="res\T3.rc2" />
   </ItemGroup>
   <ItemGroup>
